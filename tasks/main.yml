@@ -1,2 +1,11 @@
 ---
 # tasks file for ansible-jenkins
+
+- include: yum-dependencies.yml
+  when: ansible_os_family == "RedHat"
+
+- include: setup-rhel.yml
+  when: ansible_os_family == "RedHat"
+
+- include: yum-install.yml
+  when: ansible_os_family == "RedHat"

@@ -1,0 +1,15 @@
+- name: "RHEL - Check if Jenkins repo is already added"
+  stat:
+    path: "/etc/yum/jenkins.repo"
+  register: jenkins_repo
+
+- name: "RHEL - Install Jenkins repo"
+  yum:
+    name: "http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo"
+    state: present
+  when: jenkins_repo.stat.exists == False
+
+- name: RHEL - Install Jenkins RPM Key
+  rpm_key:
+    state: present
+    key: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"

@@ -1,0 +1,6 @@
+---
+- name: YUM - Install Jenkins
+  yum:
+    name: jenkins
+    state: present
+  notify: enable_jenkins

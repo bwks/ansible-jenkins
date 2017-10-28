@@ -1,0 +1,9 @@
+---
+- name: Install YUM Dependencies
+  yum: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "wget"
+    - "java-{{ openjdk_version }}-openjdk.x86_64"
+ 

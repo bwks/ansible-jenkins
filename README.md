@@ -11,7 +11,7 @@ None
 Role Variables
 --------------
 
-TBA
+openjdk_version: Version of open JDK to install defaults to 1.8.0
 
 Dependencies
 ------------
@@ -21,7 +21,11 @@ None
 Example Playbook
 ----------------
 
-TBA
+- name: Install Jenkins
+  hosts: jenkins
+  become: True
+  roles:
+    - { role: ansible-jenkins }
 
 License
 -------
