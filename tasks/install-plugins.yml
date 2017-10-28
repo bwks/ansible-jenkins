@@ -1,0 +1,11 @@
+---
+- name: Install plugin
+  jenkins_plugin:
+    name: "{{ item }}"
+    params: "{{ jenkins_params }}"
+    url_password: "{{ jenkins_url_password }}"
+    url: "http://{{ jenkins_hostname }}:{{ jenkins_url_port }}"
+  with_items:
+    - "{{ jenkins_plugins }}"
+  when: jenkins_plugins
+  notify: restart_jenkins

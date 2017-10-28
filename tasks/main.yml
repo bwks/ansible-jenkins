@@ -9,3 +9,5 @@
 
 - include: yum-install.yml
   when: ansible_os_family == "RedHat"
+
+- include: install-plugins.yml

@@ -1,4 +1,17 @@
 ---
 # defaults file for ansible-jenkins
 
+# Java variables
 openjdk_version: "1.8.0"
+
+# Plugins
+# This should be a list
+jenkins_plugins: ""
+
+# Web console variables
+jenkins_params:
+  url_username: "admin"
+
+jenkins_hostname: "{{ inventory_hostname }}"
+jenkins_url_port: "8080"
+jenkins_url_password: ""
