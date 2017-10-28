@@ -13,7 +13,7 @@ Role Variables
 
 ```yaml
 # Java variables
-openjdk_version: Version of open JDK to install defaults to 1.8.0
+openjdk_version: "Version of open JDK to install - Default: 1.8.0"
 
 # Plugins
 # This should be a list
