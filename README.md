@@ -20,13 +20,13 @@ None
 
 Example Playbook
 ----------------
-
+```yaml
 - name: Install Jenkins
   hosts: jenkins
   become: True
   roles:
     - { role: ansible-jenkins }
-
+```
 License
 -------
 
