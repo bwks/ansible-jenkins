@@ -11,7 +11,9 @@ None
 Role Variables
 --------------
 
+```yaml
 openjdk_version: Version of open JDK to install defaults to 1.8.0
+```
 
 Dependencies
 ------------
