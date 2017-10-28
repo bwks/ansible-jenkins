@@ -4,9 +4,12 @@
   register: jenkins_repo
 
 - name: "RHEL - Install Jenkins repo"
-  yum:
-    name: "http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo"
-    state: present
+  get_url: 
+    url:  "http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo"
+    dest: "/etc/yum.repos.d/jenkins.repo"
+    mode: 0644
+    owner: root
+    group: root
   when: jenkins_repo.stat.exists == False
 
 - name: RHEL - Install Jenkins RPM Key
