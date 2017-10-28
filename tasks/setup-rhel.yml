@@ -1,6 +1,6 @@
 - name: "RHEL - Check if Jenkins repo is already added"
   stat:
-    path: "/etc/yum/jenkins.repo"
+    path: "/etc/yum.repos.d/jenkins.repo"
   register: jenkins_repo
 
 - name: "RHEL - Install Jenkins repo"
