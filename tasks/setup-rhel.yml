@@ -16,3 +16,4 @@
   rpm_key:
     state: present
     key: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+

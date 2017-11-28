@@ -7,7 +7,16 @@
 - include: setup-rhel.yml
   when: ansible_os_family == "RedHat"
 
+#- include: jdk-install.yml
+#  when: jdk_file_name is defined 
+
+- include: config-environment.yml
+
 - include: yum-install.yml
   when: ansible_os_family == "RedHat"
 
+#- include: maven-install.yml
+#  when: install_maven == True
+
 - include: install-plugins.yml
+

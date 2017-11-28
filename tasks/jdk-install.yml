@@ -1,0 +1,11 @@
+---
+- name: Copy JDK file to server
+  copy:
+    src: "files/{{ jdk_file_name }}"
+    dest: "/tmp/{{ jdk_file_name }}"
+
+- name: Install JDK
+  yum:
+    name: "/tmp/{{ jdk_file_name }}"
+    state: present
+

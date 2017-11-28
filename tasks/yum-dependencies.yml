@@ -5,5 +5,6 @@
     state: latest
   with_items:
     - "wget"
+    - "git"
     - "java-{{ openjdk_version }}-openjdk.x86_64"
  

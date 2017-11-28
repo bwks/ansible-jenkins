@@ -1,0 +1,6 @@
+---
+- name: YUM - Install Maven
+  yum: 
+    name: maven
+    state: installed
+
